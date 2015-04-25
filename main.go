@@ -6,13 +6,15 @@ import (
 	"log"
 	"os"
 	"os/exec"
+	"strings"
 )
 
 func main() {
 	logger := log.New(os.Stdout, "", 0)
 	logStreamerOut := logstreamer.NewLogstreamer(logger, "stdout", false)
 	logStreamerErr := logstreamer.NewLogstreamer(logger, "stderr", true)
-	cmd := exec.Command(os.Args[1], os.Args[2:]...)
+	command := strings.Join(os.Args[1:], " ")
+	cmd := exec.Command("bash", "-c", command)
 	cmd.Stdout = logStreamerOut
 	cmd.Stderr = logStreamerErr
 	logStreamerErr.FlushRecord()

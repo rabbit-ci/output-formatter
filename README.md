@@ -5,7 +5,9 @@ Annotate/prefix command output.
 
 # Install
 
-`go get -u github.com/rabbit-ci/output-formatter`
+```
+go get -u github.com/rabbit-ci/output-formatter
+```
 
 # Usage
 

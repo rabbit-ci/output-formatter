@@ -1,9 +1,17 @@
 # output-formatter
-Annotate/prefix command output.
+Annotate/prefix command output. Only works on computers with bash installed.
 
 ![Picture](screenshot.png)
 
 # Install
+
+On Mac you can do: 
+
+```
+brew install https://raw.githubusercontent.com/rabbit-ci/output-formatter/master/output-formatter.rb
+```
+
+Everything else is:
 
 ```
 go get -u github.com/rabbit-ci/output-formatter
